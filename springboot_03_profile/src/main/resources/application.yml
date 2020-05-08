@@ -1,0 +1,27 @@
+## 配置动态切换功能
+#
+#---
+#server:
+#  port: 8081
+#
+#spring:
+#  profiles: dev
+#---
+#server:
+#  port: 8082
+#
+#spring:
+#  profiles: test
+#---
+#server:
+#  port: 8083
+#
+#spring:
+#  profiles: pro
+#---
+## 配置文件方式激活
+#spring:
+#  profiles:
+#    active: pro
+#
+#生产中基本不用这种配置,常用多文件方式配置

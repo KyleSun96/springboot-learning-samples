@@ -1,2 +1,2 @@
 # springboot-learning-samples
-springboot学习案例
+springboot学习
