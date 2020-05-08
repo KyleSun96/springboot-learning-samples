@@ -1,0 +1,24 @@
+# 对象(map)：键值对的集合。
+person:
+  name: zhangsan
+  age: 24
+  address:
+    - beijing
+    - shanghai
+
+
+# 数组
+address:
+  - beijing
+  - shanghai
+
+
+# 纯量
+msg1: 'hello \n world'  # 单引忽略转义字符
+msg2: "hello \n world"  # 双引识别转义字符
+
+
+# 参数引用
+test:
+  msg: ${msg1} # 引用上面定义的name值
+
