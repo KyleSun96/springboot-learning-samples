@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @ClassName: listener
  * @Description: 监听队列
  * @Author: KyleSun
- * @Create: 11:27 2020/5/13
  **/
 @Component
 public class RabbitMqListener {
