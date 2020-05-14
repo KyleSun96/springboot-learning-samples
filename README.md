@@ -38,5 +38,7 @@
 
 
 - springboot_11_rabbitmq
-  - SpringBoot整合RabbitMQ
+  - SpringBoot整合 RabbitMQ 测试
+    - springboot_11_rabbitmq_consumer      消费者部分
+    - springboot_11_rabbitmq_producer      生产者部分
 
