@@ -1,0 +1,4 @@
+# thymeleaf加载页面时，关闭缓存，用于测试
+spring:
+  thymeleaf:
+    cache: false

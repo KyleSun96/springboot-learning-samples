@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>thymeleaf功能测试</title>
+</head>
+<body>
+
+
+<h3>1. 获取文本数据</h3>
+<p th:text="${test}"></p>
+<hr>
+
+<h3>2. 提交表单</h3>
+<form th:action="@{/demo/test}">
+    <input th:type="text" th:name="id">
+    <button>提交</button>
+</form>
+<hr>
+
+<h3>3. 对象遍历</h3>
+<table>
+    <tr>
+        <td>下标</td>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>住址</td>
+    </tr>
+    <!--thymeleaf取出集合后，必须给它起一个别名，否则会报错 -->
+    <tr th:each="user,userStat:${userList}">
+        <td th:text="${userStat.index}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.address}"></td>
+    </tr>
+</table>
+<hr>
+
+<h3>4. map取值</h3>
+<div th:each="map,mapStat:${dataMap}">
+    map: <span th:text="${map}"></span><br>
+    key: <span th:text="${map.getKey()}"></span><br>
+    key: <span th:text="${mapStat.current.key}"></span><br>
+    value: <span th:text="${map.getValue()}"></span><br>
+    value: <span th:text="${mapStat.current.value}"></span><br>
+    ==================
+</div>
+
+<h3>5. 数组遍历</h3>
+<div th:each="name,nameStat:${names}">
+    <!--index从1开始，count从0开始-->
+    <span th:text="${nameStat.count}"></span>
+    <span th:text="${name}"></span><br>
+    ==================
+</div>
+
+<h3>6. 日期显示</h3>
+<div>
+    <span th:text="${#dates.format(now,'yyyy-MM-dd hh:mm:ss')}"></span>
+</div>
+
+<h3>7. 条件判断</h3>
+<div>
+    <span th:if="${(age>=18)}">终于成年了</span>
+</div>
+
+<h3>8. 模块声明与页面包含</h3>
+<div id="b" th:include="footer::about"></div>
+
+</body>
+</html>
